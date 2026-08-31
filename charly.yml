@@ -1,7 +1,7 @@
 version: 2026.240.1943
 charly-image:
     candy:
-        version: 2026.218.1200
+        version: 2026.243.0100
         description: |-
             Concept candy owning the charly-image kind-authoring skills (image/layer schema). Owns its family's `skill:` kind entities (sibling nodes in this file) — the
             the plugins→candies migration; candy/plugin-marketplace regenerates the marketplace
@@ -205,16 +205,16 @@ image-skill:
                 base: fedora
                 produce: [pixi, npm, cargo]  # declares what this builder can build
                 candy:
-                  - '@github.com/opencharly/layer-pixi:v2026.237.457'
-                  - '@github.com/opencharly/layer-nodejs:v2026.235.2056'
-                  - '@github.com/opencharly/layer-build-toolchain:v2026.237.455'
+                  - '@github.com/opencharly/layer-pixi:v2026.239.1634'
+                  - '@github.com/opencharly/layer-nodejs:v2026.239.1624'
+                  - '@github.com/opencharly/layer-build-toolchain:v2026.239.1636'
 
             my-app:
               candy:
                 base: fedora
                 env_file: "~/.config/my-app/.env"
                 candy:
-                  - '@github.com/opencharly/pod-traefik:v2026.237.558'
+                  - '@github.com/opencharly/pod-traefik:v2026.243.0508'
                   - my-service          # declares service: — the init is injected, not listed here.
                                         # Published ports are inherited from the candies (no box `port:`)
                 env:
@@ -1329,8 +1329,8 @@ layer-skill:
             my-app:
               candy:
                 require:
-                  - '@github.com/opencharly/layer-python:v2026.235.2057'
-                  - '@github.com/opencharly/layer-build-toolchain:v2026.237.455'
+                  - '@github.com/opencharly/layer-python:v2026.243.0409'
+                  - '@github.com/opencharly/layer-build-toolchain:v2026.239.1636'
             ```
 
             ### `require` vs `candy` (composition)
@@ -1754,7 +1754,7 @@ layer-skill:
               candy:
                 version: 2026.144.1531
                 require:
-                  - '@github.com/opencharly/layer-golang:v2026.235.2057'
+                  - '@github.com/opencharly/layer-golang:v2026.239.1614'
                 env:
                   GOPATH: "~/go"
                 path_append:
