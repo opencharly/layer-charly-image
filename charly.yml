@@ -22,7 +22,8 @@ image-skill:
         family: image
         owner: charly-image
         description: |-
-            MUST be invoked before any work involving: the `charly box` command family, box definitions in charly.yml, box inheritance, defaults, platforms, builder configuration, the box dependency graph, or the build/deploy scope boundary.
+            The `charly box` command family, box definitions in charly.yml, box inheritance, defaults, platforms, builder configuration, the box dependency graph, or the build/deploy scope boundary.
+
         triggers:
             - "Editing a box (`box/<name>/charly.yml` \u2014 boxes live in the `box/<distro>` submodules; main owns none), box composition"
         content: |
@@ -688,7 +689,8 @@ layer-skill:
         family: image
         owner: charly-image
         description: |-
-            MUST be invoked before any work involving: candy authoring, charly.yml, plan steps, pixi.toml, package.json, Cargo.toml, or any file under candy/. This skill is the authoritative reference for the plan-step verb catalog (`run:`/`check:` steps), `var:` substitution, execution order, and per-verb validation. Every other skill defers here for install-schema questions.
+            Candy authoring, charly.yml, plan steps, pixi.toml, package.json, Cargo.toml, or any file under candy/. The authoritative reference for the plan-step verb catalog (`run:`/`check:` steps), `var:` substitution, execution order, and per-verb validation.
+
         triggers:
             - "Editing a candy (`candy/<name>/charly.yml`), candy authoring, candy tasks/services"
         content: |
