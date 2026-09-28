@@ -1,5 +1,7 @@
+version: 2026.240.1943
 charly-image:
     candy:
+        version: 2026.243.0909
         description: |-
             Concept candy owning the charly-image kind-authoring skills (image/layer schema). Owns its family's `skill:` kind entities (sibling nodes in this file) — the
             the plugins→candies migration; candy/plugin-marketplace regenerates the marketplace
@@ -21,8 +23,9 @@ image-skill:
         owner: charly-image
         description: |-
             The `charly box` command family, box definitions in charly.yml, box inheritance, defaults, platforms, builder configuration, the box dependency graph, or the build/deploy scope boundary.
+
         triggers:
-            - "Editing a box (`box/<name>/charly.yml` — boxes live in the `box/<distro>` submodules; main owns none), box composition"
+            - "Editing a box (`box/<name>/charly.yml` \u2014 boxes live in the `box/<distro>` submodules; main owns none), box composition"
         content: |
             # charly box -- Family Overview + Image Composition
 
@@ -687,6 +690,7 @@ layer-skill:
         owner: charly-image
         description: |-
             Candy authoring, charly.yml, plan steps, pixi.toml, package.json, Cargo.toml, or any file under candy/. The authoritative reference for the plan-step verb catalog (`run:`/`check:` steps), `var:` substitution, execution order, and per-verb validation.
+
         triggers:
             - "Editing a candy (`candy/<name>/charly.yml`), candy authoring, candy tasks/services"
         content: |
