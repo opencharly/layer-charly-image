@@ -1,36 +1,19 @@
 charly-image:
     candy:
         description: |-
-            Concept candy owning the charly-image kind-authoring skills (image/layer schema). Owns its family's `skill:` kind entities (sibling nodes in this file) — the
-            the plugins→candies migration; candy/plugin-marketplace regenerates the marketplace
-            corpus (the standalone opencharly/marketplace repo) from them.
+            Drained concept candy — kept only so this repo still validates as a project while
+            it awaits retirement (opencharly/opencharly#600). It owns NO `skill:` entity any
+            more: under AGENTS.md Part II #5 the 2 `image` family skills moved,
+            byte-identically, to the repositories that hold the code, plugin or config each one
+            documents — `spec`.
+            Nothing is authored here now.
         plan:
-            - run: this documentation-only candy ships no install content (it carries the family's skill/hook/marketplace entities); validate-satisfying no-op
+            - run: this documentation-only candy ships no install content (it carried the family's skill entities); validate-satisfying no-op
               command: "true"
               context:
                 - build
-            - check: the image concept candy's skill entities are present and generated into the marketplace's image/skills
-              id: charly-image-present
+            - check: no-op — this drained candy declares no skill node; every image-family skill lives in the repo that holds the entity it documents
+              id: charly-image-drained
               context:
                 - build
               command: "true"
-image-skill:
-    skill:
-        name: image
-        family: image
-        owner: charly-image
-        description: |-
-            The `charly box` command family, box definitions in charly.yml, box inheritance, defaults, platforms, builder configuration, the box dependency graph, or the build/deploy scope boundary.
-
-        triggers:
-            - "Editing a box (`box/<name>/charly.yml` \u2014 boxes live in the `box/<distro>` submodules; main owns none), box composition"
-layer-skill:
-    skill:
-        name: layer
-        family: image
-        owner: charly-image
-        description: |-
-            Candy authoring, charly.yml, plan steps, pixi.toml, package.json, Cargo.toml, or any file under candy/. The authoritative reference for the plan-step verb catalog (`run:`/`check:` steps), `var:` substitution, execution order, and per-verb validation.
-
-        triggers:
-            - "Editing a candy (`candy/<name>/charly.yml`), candy authoring, candy tasks/services"
